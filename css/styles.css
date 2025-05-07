@@ -1,0 +1,47 @@
+html{
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'AmaranthBold';
+    src: url('../assets/fonts/#AmaranthBold.eot');
+    src: url('../assets/fonts/AmaranthBold.eot') format('embedded-opentype'),
+         url('../assets/fonts/AmaranthBold.woff2') format('woff2'),
+         url('../assets/fonts/AmaranthBold.woff') format('woff'),
+         url('../assets/fonts/AmaranthBold.ttf') format('truetype'),
+         url('../assets/fonts/AmaranthBold.svg#AmaranthBold') format('svg');
+}
+
+
+*::before::after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: aquamarine;
+    margin: 0;
+}
+
+.image-omelette{
+   max-width: 100%;
+   min-width: 100%;
+   height: auto;
+   object-fit: cover; 
+}
+
+figure{
+    margin: 0;
+}
+
+
+.main{
+    padding: 40px 30px 30px;
+}
+
+h1{
+    margin: 0;
+    font-family: 'AmaranthBold';
+    font-size: clamp(1em, 10vw, 20em);
+}
