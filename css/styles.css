@@ -1,5 +1,5 @@
 html{
-    font-size: 16px;
+    font-size: clamp(1em, 2vw, 4em);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
@@ -14,13 +14,12 @@ html{
          url('../assets/fonts/AmaranthBold.svg#AmaranthBold') format('svg');
 }
 
-
 *::before::after{
     box-sizing: inherit;
 }
 
 body{
-    background-color: aquamarine;
+    background-color: hsl(0, 0%, 100%);
     margin: 0;
 }
 
@@ -44,4 +43,103 @@ h1{
     margin: 0;
     font-family: 'AmaranthBold';
     font-size: clamp(1em, 10vw, 20em);
+}
+
+p, li{
+    line-height: 25px;
+}
+
+.preparation{
+    background-color: hsl(330, 100%, 98%);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.preparation h2{
+    font-size: clamp(1em, 3vw, 7em);
+    color:  hsl(332, 59%, 40%);
+    font-weight: 800;
+    font-family: unset;
+}
+
+section > h2{
+    color: hsl(14, 45%, 36%);
+    font-family: 'AmaranthBold';
+}
+
+li{
+    padding-left: 10px;
+}
+
+ul, ol{
+    padding: 0 20px;
+}
+
+li > span{
+    font-weight: bold;
+}
+
+.instructions ol li{
+    margin-bottom: 10px;
+}
+
+/* diseño de la tabla */
+table td:nth-child(2){
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+}
+
+table{
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.074);
+    padding: 20px;
+}
+
+table tr:last-child td{
+    border-bottom: none;
+}
+
+/* media querys */
+@media screen and (min-width:375px){
+    .content{
+        padding: 20px;
+        
+        border-radius: 10px;
+        background-color: hsl(0, 0%, 100%);
+        margin: auto;
+        max-width: 700px;
+    }
+
+    img{
+        border-radius: 8px;
+    }
+
+    body{
+        background-color: hsl(30, 54%, 90%);
+    }
+
+    html{
+        font-size: clamp(1em, 1vw, 2rem);
+    }
+
+    h1{
+        font-size: clamp(1.6em, 2.5vw, 2rem);
+    }
+
+    section > h2{
+        font-size: clamp(1.5em, 1.5vw, 4em);
+    }
+
+    .preparation h2{
+        font-size: clamp(0.9em, 1vw, 2em);
+    }
+
+    p, ol, ul, td{
+        font-size: clamp(0.8rem, 1vw, 2rem);
+    }
 }
